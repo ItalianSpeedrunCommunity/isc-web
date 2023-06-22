@@ -1033,10 +1033,10 @@ rs-layer[data-type~="shape"] {
 	box-shadow: none !important;
 }
 html {
-	background-color: #1b1726;
+	background-color: #f6f3ef;
 }
 #Wrapper, #Content {
-	background-color: #1b1726;
+	background-color: #f6f3ef;
 }
 body:not(.template-slider) #Header {
 	min-height: 0px;
@@ -1572,12 +1572,12 @@ h6 {
 	border-radius: 24px;
 }
 .button-custom .button {
-	color: #1b1726;
+	color: #f6f3ef;
 	background-color: #ff8c66;
 	border-color: transparent;
 }
 .button-custom .button:hover {
-	color: #1b1726;
+	color: #f6f3ef;
 	background-color: #fd6e3f;
 	border-color: transparent;
 }
@@ -2778,7 +2778,7 @@ input[type="date"], input[type="email"], input[type="number"], input[type="passw
 	}
 }
 #Header_wrapper, #Intro {
-	background-color: #1b1726;
+	background-color: #f6f3ef;
 }
 #Subheader {
 	background-color: rgba(27, 23, 38, 1);
@@ -2916,10 +2916,10 @@ hr.hr_color, .hr_color hr, .hr_dots span {
 	}
 }
 #Header .top_bar_left, .header-classic #Top_bar, .header-plain #Top_bar, .header-stack #Top_bar, .header-split #Top_bar, .header-fixed #Top_bar, .header-below #Top_bar, #Header_creative, #Top_bar #menu, .sticky-tb-color #Top_bar.is-sticky {
-	background-color: #1b1726;
+	background-color: #f6f3ef;
 }
 #Top_bar .wpml-languages a.active, #Top_bar .wpml-languages ul.wpml-lang-dropdown {
-	background-color: #1b1726;
+	background-color: #f6f3ef;
 }
 #Top_bar .top_bar_right:before {
 	background-color: #e3e3e3;
@@ -3005,8 +3005,8 @@ hr.hr_color, .hr_color hr, .hr_dots span {
 	background: transparent;
 }
 #Side_slide {
-	background-color: #1b1726;
-	border-color: #1b1726;
+	background-color: #f6f3ef;
+	border-color: #f6f3ef;
 }
 #Side_slide, #Side_slide #menu ul li.submenu .menu-toggle, #Side_slide .search-wrapper input.field, #Side_slide a:not(.action_button) {
 	color: #fff;
@@ -3272,7 +3272,7 @@ input[type="date"]:focus, input[type="email"]:focus, input[type="number"]:focus,
 }
 @media only screen and ( max-width: 767px) {
 	#Top_bar {
-		background-color: #1b1726 !important;
+		background-color: #f6f3ef !important;
 	}
 	#Action_bar {
 		background-color: #FFFFFF !important;
