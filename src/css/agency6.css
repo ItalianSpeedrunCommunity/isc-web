@@ -1573,12 +1573,12 @@ h6 {
 }
 .button-custom .button {
 	color: #f6f3ef;
-	background-color: #ff8c66;
+	background-color: #65677c;
 	border-color: transparent;
 }
 .button-custom .button:hover {
 	color: #f6f3ef;
-	background-color: #fd6e3f;
+	background-color: #91d7f7;
 	border-color: transparent;
 }
 .button-custom .button_theme, .button-custom button, .button-custom input[type="button"], .button-custom input[type="reset"], .button-custom input[type="submit"], .button-custom .woocommerce #respond input#submit, .button-custom .woocommerce a.button:not(.default), .button-custom .woocommerce button.button, .button-custom .woocommerce input.button {
