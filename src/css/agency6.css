@@ -2066,7 +2066,7 @@ input[type="date"], input[type="email"], input[type="number"], input[type="passw
 		padding-right: 250px;
 	}
 	#Header_creative {
-		background-color: #fff;
+		background-color: #f6f3ef;
 		position: fixed;
 		width: 250px;
 		height: 100%;
@@ -2465,7 +2465,7 @@ input[type="date"], input[type="email"], input[type="number"], input[type="passw
 		top: -60px;
 		height: 60px;
 		z-index: 701;
-		background: #fff;
+		background: #f6f3ef;
 		opacity: .97;
 		-webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
 		-moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
@@ -2799,7 +2799,7 @@ input[type="date"], input[type="email"], input[type="number"], input[type="passw
 	background-color: #101015;
 }
 .grid .post-item {
-	background-color: #fff;
+	background-color: #f6f3ef;
 }
 .portfolio_group .portfolio-item .desc {
 	background-color: #fff;
@@ -2808,7 +2808,7 @@ input[type="date"], input[type="email"], input[type="number"], input[type="passw
 	background-color: transparent;
 }
 body, ul.timeline_items, .icon_box a .desc, .icon_box a:hover .desc, .feature_list ul li a, .list_item a, .list_item a:hover, .widget_recent_entries ul li a, .flat_box a, .flat_box a:hover, .story_box .desc, .content_slider.carouselul li a .title, .content_slider.flat.description ul li .desc, .content_slider.flat.description ul li a .desc, .post-nav.minimal a i {
-	color: #000000;
+	color: #f6f3ef;
 }
 .post-nav.minimal a svg {
 	fill: #201c13;
@@ -3757,10 +3757,10 @@ body.mobile-side-slide {
 	}
 }
 .ui-tabs .ui-tabs-nav li.ui-state-active a:after, body:not(.woocommerce-page) table tr:hover td, body:not(.woocommerce-page) table tr:hover td a {
-	color: #fff;
+	color: #f6f3ef;
 }
 .accordion .question .answer, .ui-tabs .ui-tabs-panel, .ui-tabs .ui-tabs-nav li.ui-state-active a, .ui-tabs .ui-tabs-nav li.ui-tabs-selected:after, .ui-tabs .ui-tabs-nav li.ui-state-active:after, .tabs_vertical.ui-tabs .ui-tabs-nav li.ui-state-active a {
-	background-color: #fff;
+	background-color: #f6f3ef;
 }
 /* ------------------------------------------- *
 * demo
