@@ -2808,7 +2808,7 @@ input[type="date"], input[type="email"], input[type="number"], input[type="passw
 	background-color: transparent;
 }
 body, ul.timeline_items, .icon_box a .desc, .icon_box a:hover .desc, .feature_list ul li a, .list_item a, .list_item a:hover, .widget_recent_entries ul li a, .flat_box a, .flat_box a:hover, .story_box .desc, .content_slider.carouselul li a .title, .content_slider.flat.description ul li .desc, .content_slider.flat.description ul li a .desc, .post-nav.minimal a i {
-	color: #f6f3ef;
+	color: #;
 }
 .post-nav.minimal a svg {
 	fill: #201c13;
@@ -2826,10 +2826,10 @@ body, ul.timeline_items, .icon_box a .desc, .icon_box a:hover .desc, .feature_li
 	border-color: #d671ff;
 }
 a {
-	color: #fff;
+	color: #65677c;
 }
 a:hover {
-	color: #d671ff;
+	color: #91d7f7;
 }
 *::-moz-selection {
 	background-color: #d671ff;
@@ -3757,10 +3757,10 @@ body.mobile-side-slide {
 	}
 }
 .ui-tabs .ui-tabs-nav li.ui-state-active a:after, body:not(.woocommerce-page) table tr:hover td, body:not(.woocommerce-page) table tr:hover td a {
-	color: #f6f3ef;
+	color: #fff;
 }
 .accordion .question .answer, .ui-tabs .ui-tabs-panel, .ui-tabs .ui-tabs-nav li.ui-state-active a, .ui-tabs .ui-tabs-nav li.ui-tabs-selected:after, .ui-tabs .ui-tabs-nav li.ui-state-active:after, .tabs_vertical.ui-tabs .ui-tabs-nav li.ui-state-active a {
-	background-color: #f6f3ef;
+	background-color: #fff;
 }
 /* ------------------------------------------- *
 * demo
