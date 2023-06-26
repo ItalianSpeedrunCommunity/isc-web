@@ -3820,3 +3820,9 @@ body.mobile-side-slide {
 #contactform #submit, #newsletterform input {
 	width: 100%;
 }
+
+.main-hero {
+	height: 100vh;
+	background-position: top center;
+	background-size: cover;
+}
