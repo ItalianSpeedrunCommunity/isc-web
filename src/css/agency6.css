@@ -3841,8 +3841,15 @@ body.mobile-side-slide {
 	width: 60px;
 }
 
+.guf-logo {
+	height: 300px;
+}
+
 @media only screen and (max-width: 1023px) {
 	.footer-social img {
 		width: 50px;
+	}
+	.guf-logo {
+		height: 260px;
 	}
 }
