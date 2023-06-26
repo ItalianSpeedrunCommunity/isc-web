@@ -3850,8 +3850,15 @@ body.mobile-side-slide {
 }
 
 .charity {
-	margin-bottom: 20px;
+	margin: 70px auto;
 }
+
+.charity-image {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @media only screen and (max-width: 1023px) {
 	.footer-social img {
 		width: 50px;
