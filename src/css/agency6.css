@@ -2784,7 +2784,7 @@ input[type="date"], input[type="email"], input[type="number"], input[type="passw
 	background-color: rgba(27, 23, 38, 1);
 }
 .header-classic #Action_bar, .header-fixed #Action_bar, .header-plain #Action_bar, .header-split #Action_bar, .header-stack #Action_bar {
-	background-color: #101015;
+	background-color: #26262e;
 }
 #Sliding-top {
 	background-color: #545454;
@@ -2796,7 +2796,7 @@ input[type="date"], input[type="email"], input[type="number"], input[type="passw
 	border-top-color: #545454;
 }
 #Footer {
-	background-color: #101015;
+	background-color: #26262e;
 }
 .grid .post-item {
 	background-color: #f6f3ef;
@@ -2819,6 +2819,10 @@ body, ul.timeline_items, .icon_box a .desc, .icon_box a:hover .desc, .feature_li
 .pink {
 	color: #d671ff;
 }
+.head {
+	background-color: rgba(38,38,46,.5)
+}
+
 .themebg, #comments .commentlist>li .reply a.comment-reply-link, #Filters .filters_wrapper ul li a:hover, #Filters .filters_wrapper ul li.current-cat a, .fixed-nav .arrow, .offer_thumb .slider_pagination a:before, .offer_thumb .slider_pagination a.selected:after, .pager .pages a:hover, .pager .pages a.active, .pager .pages span.page-numbers.current, .pager-single span:after, .portfolio_group.exposure .portfolio-item .desc-inner .line, .Recent_posts ul li .desc:after, .Recent_posts ul li .photo .c, .slider_pagination a.selected, .slider_pagination .slick-active a, .slider_pagination a.selected:after, .slider_pagination .slick-active a:after, .testimonials_slider .slider_images, .testimonials_slider .slider_images a:after, .testimonials_slider .slider_images:before, #Top_bar .header-cart-count, #Top_bar .header-wishlist-count, .widget_categories ul, .widget_mfn_menu ul li a:hover, .widget_mfn_menu ul li.current-menu-item:not(.current-menu-ancestor)>a, .widget_mfn_menu ul li.current_page_item:not(.current_page_ancestor)>a, .widget_product_categories ul, .widget_recent_entries ul li:after, .woocommerce-account table.my_account_orders .order-number a, .woocommerce-MyAccount-navigation ul li.is-active a, .style-simple .accordion .question:after, .style-simple .faq .question:after, .style-simple .icon_box .desc_wrapper .title:before, .style-simple #Filters .filters_wrapper ul li a:after, .style-simple .article_box .desc_wrapper p:after, .style-simple .sliding_box .desc_wrapper:after, .style-simple .trailer_box:hover .desc, .tp-bullets.simplebullets.round .bullet.selected, .tp-bullets.simplebullets.round .bullet.selected:after, .tparrows.default, .tp-bullets.tp-thumbs .bullet.selected:after, .woocommerce span.onsale.onsale-label, .fake-tabs>ul li a:after, .fake-tabs>ul li a .number {
 	background-color: #d671ff;
 }
