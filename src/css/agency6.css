@@ -3845,11 +3845,18 @@ body.mobile-side-slide {
 	height: 300px;
 }
 
+#Footer {
+	padding-top: 50px;
+}
+
 @media only screen and (max-width: 1023px) {
 	.footer-social img {
 		width: 50px;
 	}
 	.guf-logo {
 		height: 260px;
+	}
+	#Footer {
+		padding-top: 20px;
 	}
 }
