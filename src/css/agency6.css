@@ -3850,7 +3850,13 @@ body.mobile-side-slide {
 }
 
 .charity {
-	margin: 70px auto;
+	padding-top: 30px;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 30px;
+}
+.charity-contacts {
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 
 .charity-image {
