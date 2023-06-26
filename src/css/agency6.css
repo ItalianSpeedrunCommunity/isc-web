@@ -3830,3 +3830,19 @@ body.mobile-side-slide {
 .community-member {
 	color: #d671ff!important;
 }
+
+.footer-social {
+	display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+.footer-social img {
+	width: 60px;
+}
+
+@media only screen and (max-width: 1023px) {
+	.footer-social img {
+		width: 50px;
+	}
+}
