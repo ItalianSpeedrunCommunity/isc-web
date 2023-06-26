@@ -3826,3 +3826,7 @@ body.mobile-side-slide {
 	background-position: top center;
 	background-size: cover;
 }
+
+.community-member {
+	color: #d671ff!important;
+}
