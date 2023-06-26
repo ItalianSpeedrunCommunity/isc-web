@@ -3849,6 +3849,9 @@ body.mobile-side-slide {
 	padding-top: 50px;
 }
 
+.charity {
+	margin-bottom: 20px;
+}
 @media only screen and (max-width: 1023px) {
 	.footer-social img {
 		width: 50px;
