@@ -712,7 +712,7 @@ body:not(.with_aside) .portfolio_group.list .portfolio-item .portfolio-item-fw-w
 	margin-bottom: 15px
 }
 .testimonials_slider .testimonials_slider_ul li .author {
-	text-align: center
+	text-align: center;
 }
 .testimonials_slider .testimonials_slider_ul li .author h5 {
 	margin-bottom: 2px
