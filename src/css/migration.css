@@ -35,6 +35,10 @@
     text-align: center
 }
 
+.mb-60 {
+    margin-bottom: 60px;
+}
+
 .margin-60 {
     margin: 0 auto 60px
 }
@@ -137,6 +141,9 @@
 }
 .content_slider_ul {
     max-width: 800px;
+}
+.wd-100 {
+    width: 100%;
 }
 
 @media only screen and (max-width: 1023px) {
