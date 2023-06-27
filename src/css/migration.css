@@ -3,23 +3,27 @@
     height: 60px;
 }
 
-.wide_banner_beneficienza_image {
+.wide-banner-charity-image {
     background-image: url(../isc/images/beneficenza.jpg)
 }
 
-.wide_banner_beneficienza_image {
+.wide-banner-contacts-image {
     background-image: url(../isc/images/contattaci.png)
 }
 
-.wide_banner_eventi_image {
+.wide-banner-events-image {
     background-image: url(../isc/images/eventi.png)
 }
 
-.quadratone_intorno_a_foto_iniziale {
-    background-image: url(../isc/images/home.png)
+.wide-banner-home-image {
+    background-image: url(../isc/images/home.jpg)
 }
 
-.quadratone_intorno_a_titolo {
+.wide-banner-community-image {
+    background-image: url(../isc/images/community.png)
+}
+
+.title-square-wrap {
     padding-top: 40vh
 }
 
@@ -47,7 +51,7 @@
     margin: 0 auto 40px
 }
 
-.container-testo-community {
+.container-community-text {
     padding-top: 80px; 
     padding-bottom: 80px
 }
@@ -72,4 +76,67 @@
 .twitch-embed {
     height: 100vh; 
     display: none
+}
+
+.main-hero {
+	height: 100vh;
+	background-position: top center;
+	background-size: cover;
+}
+
+.community-member {
+	color: #d671ff!important;
+}
+
+.footer-social {
+	display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+.footer-social img {
+	width: 60px;
+}
+
+.guf-logo {
+	height: 300px;
+}
+
+#Footer {
+	padding-top: 50px;
+}
+
+.charity {
+	padding-top: 30px;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 30px;
+}
+.charity-contacts {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.charity-image {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 1023px) {
+	.footer-social img {
+		width: 50px;
+	}
+	.guf-logo {
+		height: 260px;
+	}
+	#Footer {
+		padding-top: 20px;
+	}
+	.charity-text {
+		order: 1;
+	}
+	.charity-image {
+		order: 2;
+		margin-top: 20px;
+	}
 }
