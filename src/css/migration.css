@@ -129,6 +129,16 @@
     text-shadow: 1px 1px rgb(0, 0, 0, 0.5);
 }
 
+.content_slider {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.content_slider_ul {
+    max-width: 800px;
+}
+
 @media only screen and (max-width: 1023px) {
 	.footer-social img {
 		width: 50px;
