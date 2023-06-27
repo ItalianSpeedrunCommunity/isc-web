@@ -129,7 +129,7 @@
 #Wrapper #Header_wrapper #Header #Top_bar {
     background: rgb(0, 0, 0, .3)!important;
 }
-is-sticky
+
 #Top_bar li {
     text-shadow: 1px 1px rgb(0, 0, 0, 0.5);
 }
@@ -151,6 +151,12 @@ is-sticky
 }
 .event-numbers .wd-100 {
     margin: 0;
+}
+
+@media only screen and (min-width: 1024px) {
+    #Wrapper #Header_wrapper #Header #Top_bar.is-sticky {
+        background: rgb(0, 0, 0, .7)!important;
+    }
 }
 
 @media only screen and (max-width: 1023px) {
