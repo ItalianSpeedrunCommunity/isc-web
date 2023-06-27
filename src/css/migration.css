@@ -125,6 +125,9 @@
 #Wrapper #Header_wrapper #Header #Top_bar {
     background: rgb(0, 0, 0, .3)!important;
 }
+#Top_bar li {
+    text-shadow: 1px 1px rgb(0, 0, 0, 0.5);
+}
 
 @media only screen and (max-width: 1023px) {
 	.footer-social img {
