@@ -593,22 +593,5 @@
     <script src="../../js/animations/animations.js"></script>
     <script src="../../js/translate3d.js"></script>
     <script src="../../js/scripts.js"></script>
-
-    <!-- Load the Twitch embed JavaScript file -->
-    <script src="https://embed.twitch.tv/embed/v1.js"></script>
-
-    <!-- Create a Twitch.Embed object that will render within the "twitch-embed" element -->
-    <script type="text/javascript">
-      var player = new Twitch.Player('twitch-embed', {
-        width: '100%',
-        height: '100%',
-        channel: 'italianspeedruncommunity',
-      })
-      player.addEventListener(Twitch.Player.ONLINE, function () {
-        console.log('Streamer is online')
-        document.getElementById('twitch-embed').style.display = 'block'
-        document.getElementById('hero').style.display = 'none'
-      })
-    </script>
   </body>
 </html>
