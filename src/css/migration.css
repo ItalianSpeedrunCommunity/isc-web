@@ -1,0 +1,75 @@
+.logo-main {
+    width: 230px;
+    height: 60px;
+}
+
+.wide_banner_beneficienza_image {
+    background-image: url(isc/images/beneficenza.jpg)
+}
+
+.wide_banner_beneficienza_image {
+    background-image: url(isc/images/contattaci.png)
+}
+
+.wide_banner_eventi_image {
+    background-image: url(isc/images/eventi.png)
+}
+
+.quadratone_intorno_a_foto_iniziale {
+    background-image: url(isc/images/home.png)
+}
+
+.quadratone_intorno_a_titolo {
+    padding-top: 40vh
+}
+
+.container-charity-img {
+    padding: 0 2%
+}
+
+.container-contattaci {
+    text-align: center
+}
+
+.margin-60 {
+    margin: 0 auto 60px
+}
+
+.margin-70 {
+    margin: 0 auto 70px
+}
+
+.margin-50 {
+    margin: 0 auto 50px
+}
+
+.margin-40 {
+    margin: 0 auto 40px
+}
+
+.container-testo-community {
+    padding-top: 80px; 
+    padding-bottom: 80px
+}
+
+.social-container {
+    width: 400px; 
+    margin: 0 auto
+}
+
+.centered_text {
+    text-align: center
+}
+
+.text_section_padding {
+    padding: 0 2%
+}
+
+.padding_top_40 {
+    padding-top: 40px
+}
+
+.twitch-embed {
+    height: 100vh; 
+    display: none
+}
