@@ -1,0 +1,142 @@
+.logo-main {
+    width: 230px;
+    height: 60px;
+}
+
+.wide-banner-charity-image {
+    background-image: url(../isc/images/beneficenza.jpg)
+}
+
+.wide-banner-contacts-image {
+    background-image: url(../isc/images/contattaci.png)
+}
+
+.wide-banner-events-image {
+    background-image: url(../isc/images/eventi.png)
+}
+
+.wide-banner-home-image {
+    background-image: url(../isc/images/home.jpg)
+}
+
+.wide-banner-community-image {
+    background-image: url(../isc/images/community.png)
+}
+
+.title-square-wrap {
+    padding-top: 40vh
+}
+
+.container-charity-img {
+    padding: 0 2%
+}
+
+.container-contattaci {
+    text-align: center
+}
+
+.margin-60 {
+    margin: 0 auto 60px
+}
+
+.margin-70 {
+    margin: 0 auto 70px
+}
+
+.margin-50 {
+    margin: 0 auto 50px
+}
+
+.margin-40 {
+    margin: 0 auto 40px
+}
+
+.container-community-text {
+    padding-top: 80px; 
+    padding-bottom: 80px
+}
+
+.social-container {
+    width: 400px; 
+    margin: 0 auto
+}
+
+.centered_text {
+    text-align: center
+}
+
+.text_section_padding {
+    padding: 0 2%
+}
+
+.padding_top_40 {
+    padding-top: 40px
+}
+
+.twitch-embed {
+    height: 100vh; 
+    display: none
+}
+
+.main-hero {
+	height: 100vh;
+	background-position: top center;
+	background-size: cover;
+}
+
+.community-member {
+	color: #d671ff!important;
+}
+
+.footer-social {
+	display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+.footer-social img {
+	width: 60px;
+}
+
+.guf-logo {
+	height: 300px;
+}
+
+#Footer {
+	padding-top: 50px;
+}
+
+.charity {
+	padding-top: 30px;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 30px;
+}
+.charity-contacts {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.charity-image {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 1023px) {
+	.footer-social img {
+		width: 50px;
+	}
+	.guf-logo {
+		height: 260px;
+	}
+	#Footer {
+		padding-top: 20px;
+	}
+	.charity-text {
+		order: 1;
+	}
+	.charity-image {
+		order: 2;
+		margin-top: 20px;
+	}
+}
