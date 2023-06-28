@@ -34,7 +34,7 @@ body {
 }
 
 .wide-banner-contacts-image {
-    background-image: url(../isc/images/contattaci.png)
+    background-image: url(../isc/images/contattaci.jpg)
 }
 
 .wide-banner-events-image {
@@ -46,7 +46,7 @@ body {
 }
 
 .wide-banner-community-image {
-    background-image: url(../isc/images/community.png)
+    background-image: url(../isc/images/la_community.jpg)
 }
 
 .title-square-wrap {
@@ -87,7 +87,6 @@ body {
 }
 
 .social-container {
-    width: 400px; 
     margin: 0 auto
 }
 
@@ -184,6 +183,10 @@ body {
     margin: 0;
 }
 
+img.scale-with-grid, #Content img {
+    height: 85px;
+}
+
 @media only screen and (min-width: 1024px) {
     #Wrapper #Header_wrapper #Header #Top_bar.is-sticky {
         background: rgb(0, 0, 0, .7)!important;
@@ -255,11 +258,15 @@ body {
     .main-hero {
         align-items: center;
         justify-content: center;
+        height: 95vh;
     }
     .title {
         text-align: center;
         margin-top: 50vh;
         font-size: 50px;
         width: 110%;
+    }
+    .slider_pagination a, .tp-bullets.simplebullets.round .bullet {
+        margin: 0 2px;
     }
 }
