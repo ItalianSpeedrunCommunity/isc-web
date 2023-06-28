@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@cloudflare/pages-plugin-mailchannels": "^0.1.2"
+  }
+}
