@@ -1,0 +1,332 @@
+@font-face {
+    font-family: lemon-milk;
+    src: url(fonts/lemon_milk/LEMONMILK-Regular.otf);
+}
+
+@font-face {
+    font-family: montserrat;
+    src: url(fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+body {
+    font-family: montserrat;
+}
+
+.title {
+    background-color: rgba(38,38,46,.5);
+    font-size: 70px;
+    line-height: 1em;
+    color: white;
+    padding: 0.35em;
+}
+
+.title .themecolor {
+    font-family: lemon-milk;
+}
+
+.logo-main {
+    width: 230px;
+    height: 60px;
+}
+
+.wide-banner-charity-image {
+    background-image: url(../isc/images/beneficenza.jpg)
+}
+
+.wide-banner-contacts-image {
+    background-image: url(../isc/images/contattaci.jpg)
+}
+
+.wide-banner-events-image {
+    background-image: url(../isc/images/eventi.png)
+}
+
+.wide-banner-home-image {
+    background-image: url(../isc/images/home.jpg)
+}
+
+.wide-banner-community-image {
+    background-image: url(../isc/images/la_community.jpg)
+}
+
+.title-square-wrap {
+    padding-top: 40vh
+}
+
+.container-charity-img {
+    padding: 0 2%
+}
+
+.container-contattaci {
+    text-align: center
+}
+
+.mb-60 {
+    margin-bottom: 60px;
+}
+
+.margin-60 {
+    margin: 0 auto 60px
+}
+
+.margin-70 {
+    margin: 0 auto 70px
+}
+
+.margin-50 {
+    margin: 0 auto 50px
+}
+
+.margin-40 {
+    margin: 0 auto 40px
+}
+
+.container-community-text {
+    padding-top: 80px; 
+    padding-bottom: 80px
+}
+
+.social-container {
+    margin: 0 auto;
+}
+
+.centered_text {
+    text-align: center
+}
+
+.text_section_padding {
+    padding: 0 2%
+}
+
+.padding_top_40 {
+    padding-top: 40px
+}
+
+.twitch-embed {
+    height: 100vh; 
+    display: none
+}
+
+.main-hero {
+	height: 100vh;
+	background-position: top center;
+	background-size: cover;
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+
+.community-member {
+	color: #d671ff!important;
+}
+
+.footer-social {
+	display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+
+.footer-social img {
+	width: 60px;
+}
+
+#Footer {
+	padding-top: 50px;
+}
+
+.charity {
+	padding-top: 30px;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 30px;
+}
+.charity-contacts {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.charity-image {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Wrapper #Header_wrapper #Header #Top_bar {
+    background: rgb(0, 0, 0, .3)!important;
+}
+
+#Top_bar li {
+    text-shadow: 1px 1px rgb(0, 0, 0, 0.5);
+}
+
+.content_slider {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.content_slider_ul {
+    max-width: 800px;
+}
+.wd-100 {
+    width: 100%;
+}
+.event-numbers {
+    width: 100%;
+}
+.event-numbers .wd-100 {
+    margin: 0;
+}
+
+.testimonials_slider .single-photo-img img {
+    height: 85px!important;
+}
+
+#social-container {
+    display: flex;
+    justify-content: center;
+}
+
+.business-email {
+    margin-bottom: 20px;
+}
+.guf-event {
+    padding: 35px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.guf-event h2 {
+    color: white;
+    font-family: lemon-milk;
+    font-size: 2.3em;
+}
+.guf-event-spring {
+    background-color: #262F61;
+}
+.guf-event-autumn {
+    background-color: #BD415D;
+}
+
+@media only screen and (min-width: 1024px) {
+    #Wrapper #Header_wrapper #Header #Top_bar.is-sticky {
+        background: rgb(0, 0, 0, .7)!important;
+    }
+
+    .title {
+        position: relative;
+        top: -0.5em;
+        left: 0.5em;
+    }
+
+    #Top_bar .menu>li>a span:not(.description) {
+        border-style: none;
+    }
+
+    .guf-logo {
+        max-width: 400px;
+        max-height: 320px;
+        margin-bottom: 40px;
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+	.footer-social img {
+		width: 50px;
+	}
+	#Footer {
+		padding-top: 20px;
+	}
+	.charity-text {
+		order: 1;
+	}
+	.charity-image {
+		order: 2;
+		margin-top: 20px;
+	}
+
+	.event-image {
+		order: 1;
+	}
+    .event-text {
+		order: 2;
+		margin-top: 20px;
+	}
+	.event-numbers {
+		order: 3;
+		margin-top: 20px;
+	}
+    #Wrapper #Header_wrapper #Header #Top_bar {
+        background: rgb(40, 40, 40)!important;
+        padding: 3px;
+    }
+    .responsive-menu-toggle {
+        margin-top: -13px!important;
+    }
+    .mobile-header-mini #Top_bar #logo img {
+        max-height: 50px!important;
+    }
+    .content_slider_ul {
+        max-width: 100%;
+    }
+    .content_slider .slick-arrow {
+        width: 0;
+        height: 0;
+        padding: 0;
+        margin: 0;
+    }
+    #contentslider .section_wrapper {
+        margin: 0px;
+        width: 100%!important;
+    }
+    .main-hero {
+        align-items: center;
+        justify-content: center;
+        height: 95vh;
+    }
+    .title {
+        text-align: center;
+        margin-top: 50vh;
+        font-size: 50px;
+        width: 110%;
+    }
+    .slider_pagination a, .tp-bullets.simplebullets.round .bullet {
+        margin: 0 2px;
+    }
+
+    .wide-banner-charity-image {
+        background-image: url(../isc/images/beneficenza_mobile.jpg)
+    }
+    
+    .wide-banner-contacts-image {
+        background-image: url(../isc/images/contattaci_mobile.jpg)
+    }
+    
+    .wide-banner-events-image {
+        background-image: url(../isc/images/eventi_mobile.png)
+    }
+    
+    .wide-banner-home-image {
+        background-image: url(../isc/images/home_mobile.jpg)
+    }
+    
+    .wide-banner-community-image {
+        background-image: url(../isc/images/la_community_mobile.jpg)
+    }
+    .guf-event h2 {
+        font-size: 22px;
+    }
+    .guf-event-spring {
+        margin-bottom: 25px;
+        padding: 20px;
+    }
+    .guf-logo {
+        max-height: 200px;
+        max-width: 240px;
+        margin-bottom: 20px;
+    }
+}

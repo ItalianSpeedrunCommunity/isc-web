@@ -4165,7 +4165,7 @@ ul.testimonials-slider {
 	color: #fff;
 }
 .dark h5, .dark h5 a, .dark h5 a:hover {
-	color: #fff;
+	color: #65677c;
 }
 .dark h6, .dark h6 a, .dark h6 a:hover, .dark a.content_link .title {
 	color: #fff;
@@ -4180,7 +4180,7 @@ ul.testimonials-slider {
 /* Grey */
 
 .dark .blockquote p.author span, .dark .counter .desc_wrapper .title, .dark .article_box .desc_wrapper p, .dark .team .desc_wrapper p.subtitle, .dark .pricing-box .plan-header p.subtitle, .dark .pricing-box .plan-header .price sup.period, .dark .chart_box p, .dark .fancy_heading .inside, .dark .fancy_heading_line .slogan, .dark .post-meta, .dark .post-meta a, .dark .post-footer, .dark .post-footer a span.label, .dark .pager .pages a, .dark .button-love a .label, .dark .pager-single a, .dark #comments .commentlist>li .comment-author .says, .dark .fixed-nav .desc .date, .dark .filters_buttons li.label, .dark .Recent_posts ul li a .desc .date, .dark .widget_recent_entries ul li .post-date, .dark .tp_recent_tweets .twitter_time, .dark .widget_price_filter .price_label, .dark .shop-filters .woocommerce-result-count, .dark .woocommerce ul.product_list_widget li .quantity, .dark .widget_shopping_cart ul.product_list_widget li dl, .dark .product_meta .posted_in, .dark .woocommerce .shop_table .product-name .variation>dd, .dark .shipping-calculator-button:after, .dark .shop_slider .shop_slider_ul li .item_wrapper .price del, .dark .testimonials_slider .testimonials_slider_ul li .author span, .dark .testimonials_slider .testimonials_slider_ul li .author span a {
-	color: #DEDEDE;
+	color: #65677c;
 }
 
 /* Dividers */
