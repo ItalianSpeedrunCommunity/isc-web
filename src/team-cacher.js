@@ -2,16 +2,15 @@ var express = require('express')
 const fs = require('fs');
 var cors = require('cors');
 var redis = require('redis');
-const { start } = require('repl');
 
 const app = express();
 app.use(cors());
 const PORT = 8081
 
 async function startupRedis() {
-  const redisClient = redis.createClient(6379,'127.0.0.1');
+  const redisClient = redis.createClient(6379, '127.0.0.1');
   redisClient.on('error', (err) => {
-      console.log('Error occured while connecting or accessing redis server');
+    console.log('Error occured while connecting or accessing redis server');
   });
   await redisClient.connect();
   return redisClient;
@@ -50,9 +49,9 @@ async function getTeamMembers() {
 
 async function checkOnline(members) {
   var url = CHECK_ONLINE_URL;
-  for (var i = 0; i < members.length; i++) 
+  for (var i = 0; i < members.length; i++)
     url += ("user_login=" + members[i] + "&");
-  
+
   url = url.slice(0, -1);
   var response = await fetch(url, {
     method: 'GET',
@@ -75,7 +74,7 @@ async function checkOnline(members) {
 
 async function channelInfo(members) {
   var url = GET_CH_INFO;
-  for (var i = 0; i < members.length; i++) 
+  for (var i = 0; i < members.length; i++)
     url += ("login=" + members[i] + "&");
   url = url.slice(0, -1);
   var response = await fetch(url, {
@@ -106,7 +105,7 @@ app.get('/get_online_status', (req, res) => {
 
 app.use(cors({
   // CHECK ALLOWED ORIGINS
-  origin: function (origin, callback) {   
+  origin: function (origin, callback) {
     if (!origin) return callback(null, true); if (allowedOrigins.indexOf(origin) === -1) {
       var msg = 'The CORS policy for this site does not ' +
         'allow access from the specified Origin.';
@@ -140,9 +139,9 @@ function updateCache() {
     var members = await getTeamMembers();
     var toCacheInfo = {}
     Promise.all([checkOnline(members), channelInfo(members)]).then((info) => {
-      for (var i = 0; i < info.length; i++) { 
+      for (var i = 0; i < info.length; i++) {
         // first loop iterates over the two promises (list of online members and channel info list)
-        for (var j = 0; j < info[i].length; j++) { 
+        for (var j = 0; j < info[i].length; j++) {
           // this one iterates over the single information in those lists
           if ("pfp" in info[i][j]) {
             // if I have a pfp it means that this is static info about the channel
@@ -165,11 +164,11 @@ function updateCache() {
               toCacheInfo[channel_id]["view_count"] = info[i][j]['view_count']
             } else {
               toCacheInfo[channel_id] = info[i][j]
-              toCacheInfo[channel_id]["online"]  = true
+              toCacheInfo[channel_id]["online"] = true
             }
           }
         }
-      toRedis(toCacheInfo);
+        toRedis(toCacheInfo);
       }
     });
   })();
