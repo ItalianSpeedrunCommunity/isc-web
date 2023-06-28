@@ -187,6 +187,11 @@ body {
     height: 85px!important;
 }
 
+#social-container {
+    display: flex;
+    justify-content: center;
+}
+
 @media only screen and (min-width: 1024px) {
     #Wrapper #Header_wrapper #Header #Top_bar.is-sticky {
         background: rgb(0, 0, 0, .7)!important;
