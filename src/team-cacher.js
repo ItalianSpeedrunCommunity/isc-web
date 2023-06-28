@@ -1,10 +1,21 @@
 var express = require('express')
 const fs = require('fs');
 var cors = require('cors');
+var redis = require('redis');
+const { start } = require('repl');
 
 const app = express();
 app.use(cors());
 const PORT = 8081
+
+async function startupRedis() {
+  const redisClient = redis.createClient(6379,'127.0.0.1');
+  redisClient.on('error', (err) => {
+      console.log('Error occured while connecting or accessing redis server');
+  });
+  await redisClient.connect();
+  return redisClient;
+}
 
 var config = JSON.parse(fs.readFileSync('private.json'));
 
@@ -85,13 +96,17 @@ async function channelInfo(members) {
 };
 
 app.get('/get_online_status', (req, res) => {
-  statuses = pullRedisCache()
-  res.send(statuses);
+  statuses = pullRedisCache();
+  (async () => {
+    statuses = await pullRedisCache();
+    console.log(statuses)
+    res.send(statuses);
+  })();
 });
 
 app.use(cors({
-  origin: function (origin, callback) {    // allow requests with no origin 
-    // (like mobile apps or curl requests)
+  // CHECK ALLOWED ORIGINS
+  origin: function (origin, callback) {   
     if (!origin) return callback(null, true); if (allowedOrigins.indexOf(origin) === -1) {
       var msg = 'The CORS policy for this site does not ' +
         'allow access from the specified Origin.';
@@ -101,18 +116,21 @@ app.use(cors({
 }));
 
 function toRedis(info) {
-  fs.writeFileSync('cache.json', JSON.stringify(info));
+  toSend = []
+  for (const [key, value] of Object.entries(info)) {
+    toSend.push(value)
+  }
+  redisClient.set("info", JSON.stringify(toSend), redis.print)
 }
 
-function pullRedisCache() {
-  var cache = JSON.parse(fs.readFileSync('cache.json'));
-  var results = []
-  for (const [key, value] of Object.entries(cache)) {
-    results.push(value)
-  }
+async function pullRedisCache() {
+  var infoObject
+  results = await redisClient.get('info').then((info) => {
+    infoObject = JSON.parse(info)
+  })
   var sortedMembers = [
-    ...results.filter(({ online }) => online),
-    ...results.filter(({ online }) => !online)
+    ...infoObject.filter(({ online }) => online),
+    ...infoObject.filter(({ online }) => !online)
   ];
   return sortedMembers;
 }
@@ -123,10 +141,14 @@ function updateCache() {
     var toCacheInfo = {}
     Promise.all([checkOnline(members), channelInfo(members)]).then((info) => {
       for (var i = 0; i < info.length; i++) { 
+        // first loop iterates over the two promises (list of online members and channel info list)
         for (var j = 0; j < info[i].length; j++) { 
+          // this one iterates over the single information in those lists
           if ("pfp" in info[i][j]) {
+            // if I have a pfp it means that this is static info about the channel
             channel_id = info[i][j]['id'];
             if (channel_id in toCacheInfo) {
+              // check if liveInfo has already filled the final array
               toCacheInfo[channel_id]["pfp"] = info[i][j]['pfp']
               toCacheInfo[channel_id]["login"] = info[i][j]['login']
               toCacheInfo[channel_id]["toDisplay"] = info[i][j]['toDisplay']
@@ -134,8 +156,10 @@ function updateCache() {
               toCacheInfo[channel_id] = info[i][j]
             }
           } else {
+            // check online case
             channel_id = info[i][j]['channel'];
             if (channel_id in toCacheInfo) {
+              // check if channelInfo has already filled the final array
               toCacheInfo[channel_id]["online"] = true
               toCacheInfo[channel_id]["live_game"] = info[i][j]['what']
               toCacheInfo[channel_id]["view_count"] = info[i][j]['view_count']
@@ -152,6 +176,11 @@ function updateCache() {
 }
 
 /* EXECUTE ON STARTUP - UPDATE CACHE */
-updateCache();
-app.listen(PORT);
-console.log('Server started at http://localhost:' + PORT);
+
+var redisClient
+(async () => {
+  redisClient = await startupRedis();
+  app.listen(PORT);
+  console.log('Server started at http://localhost:' + PORT);
+  updateCache();
+})();

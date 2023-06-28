@@ -433,26 +433,27 @@
 
     <!-- Handler of the team embedder -->
     <script type="text/javascript">
+      select = document.getElementById("team-stream");
+      select.addEventListener('change', function(){
+        frame = document.getElementById("team-embed");
+        curr_option = select.options[ select.selectedIndex ].value.split(" ")[0];
+        console.log("TRIGGER")
+        frame.src = "https://player.twitch.tv/?channel=" + curr_option + "&parent=localhost";
+      });
       function updateSelector(status, select) {
         for(var i = 0; i < status.length; i++) {
           var opt = document.createElement('option');
           if (status[i]['online']) {
-            str_ = status[i]['toDisplay'] + " is online"
+            str_ = status[i]['toDisplay'] + " is online";
           } else {
-            str_ = status[i]['toDisplay'] + " is offline"
+            str_ = status[i]['toDisplay'] + " is offline";
           }
           opt.value = str_;
           select.add(opt);
           opt.innerHTML = str_;
         }
-        $(select).trigger("change");
+        select.dispatchEvent(new Event('change'));
       }
-      select = document.getElementById("team-stream")
-      select.addEventListener('change', function(){
-        frame = document.getElementById("team-embed");
-        curr_option = select.options[ select.selectedIndex ].value.split(" ")[0];
-        frame.src = "https://player.twitch.tv/?channel=" + curr_option + "&parent=localhost"
-      });
       $.ajax({
         type: 'GET',
         url: 'http://localhost:8081/get_online_status',
