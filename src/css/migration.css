@@ -183,8 +183,8 @@ body {
     margin: 0;
 }
 
-img.scale-with-grid, #Content img {
-    height: 85px;
+.testimonials_slider .single-photo-img img {
+    height: 85px!important;
 }
 
 @media only screen and (min-width: 1024px) {
