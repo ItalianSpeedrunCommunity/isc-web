@@ -269,4 +269,24 @@ body {
     .slider_pagination a, .tp-bullets.simplebullets.round .bullet {
         margin: 0 2px;
     }
+
+    .wide-banner-charity-image {
+        background-image: url(../isc/images/beneficenza_mobile.jpg)
+    }
+    
+    .wide-banner-contacts-image {
+        background-image: url(../isc/images/contattaci_mobile.jpg)
+    }
+    
+    .wide-banner-events-image {
+        background-image: url(../isc/images/eventi_mobile.png)
+    }
+    
+    .wide-banner-home-image {
+        background-image: url(../isc/images/home_mobile.jpg)
+    }
+    
+    .wide-banner-community-image {
+        background-image: url(../isc/images/la_community_mobile.jpg)
+    }
 }
