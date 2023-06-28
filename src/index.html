@@ -328,6 +328,18 @@
         </div>
       </div>
       <hr class="no_line margin-40" />
+      <div> 
+        <iframe 
+          id="team-embed" 
+          src="https://player.twitch.tv/?channel=italianspeedruncommunity&parent=localhost" 
+          frameborder="0" 
+          allowfullscreen="true" 
+          scrolling="no" 
+          height="378" 
+          width="620"
+        > </iframe>
+        <select name="team-stream" id="team-stream"></select>
+      </div>
     </div>
     <footer id="Footer" class="clearfix">
       <div class="container">
@@ -417,6 +429,40 @@
         document.getElementById('twitch-embed').style.display = 'block'
         document.getElementById('hero').style.display = 'none'
       })
+    </script>
+
+    <!-- Handler of the team embedder -->
+    <script type="text/javascript">
+      function updateSelector(status, select) {
+        for(var i = 0; i < status.length; i++) {
+          var opt = document.createElement('option');
+          if (status[i]['online']) {
+            str_ = status[i]['channel'] + " is online"
+          } else {
+            str_ = status[i]['channel'] + " is offline"
+          }
+          opt.value = str_;
+          select.add(opt);
+          opt.innerHTML = str_;
+        }
+      }
+      select = document.getElementById("team-stream")
+      select.addEventListener('change', function(){
+        frame = document.getElementById("team-embed")
+        curr_option = select.options[ select.selectedIndex ].value.split(" ")[0];
+        frame.src = "https://player.twitch.tv/?channel=" + curr_option + "&parent=localhost"
+      });
+      $.ajax({
+        type: 'GET',
+        url: 'http://localhost:8081/get_online_status',
+        success: function(response) { 
+          var tw = response
+          updateSelector(response, select);
+        },
+        error: function(xhr, status, err) {
+          console.log("ERROR WHEN QUERYING CACHE - ", xhr.responseText);
+        }
+    });
     </script>
   </body>
 </html>

@@ -1,11 +1,10 @@
 var express = require('express')
-const path = require('path');
 const fs = require('fs');
+var cors = require('cors');
 
 const app = express();
-app.engine('html', require('ejs').renderFile);
-app.set('view engine', 'html');
-const PORT = 8080
+app.use(cors());
+const PORT = 8081
 
 var config = JSON.parse(fs.readFileSync('private.json'));
 
@@ -13,6 +12,8 @@ const Oauth = 'Bearer ' + config["Oauth"]
 const ClientId = config["ClientId"]
 const CHECK_ONLINE_URL = 'https://api.twitch.tv/helix/streams?user_login='
 const TEAM_URL = 'https://api.twitch.tv/helix/teams?id=13648'
+
+var allowedOrigins = ['http://localhost:8080'];
 
 headers = {
   "Content-Type": 'application/json',
@@ -70,18 +71,34 @@ async function checkOnline(channelName) {
   return result;
 };
 
-
-app.get('/', function(req, res) {
-  res.render(path.join(__dirname, '/index.html'));
+app.get('/get_online_status', (req, res) => {
+  statuses = JSON.parse(fs.readFileSync('cache.json'))
+  const sortedMembers = [
+    ...statuses.filter(({online}) => online),
+    ...statuses.filter(({online}) => !online)
+];
+  res.send(sortedMembers);
 });
 
+app.use(cors({
+  origin: function(origin, callback){    // allow requests with no origin 
+    // (like mobile apps or curl requests)
+    if(!origin) return callback(null, true);    if(allowedOrigins.indexOf(origin) === -1){
+      var msg = 'The CORS policy for this site does not ' +
+                'allow access from the specified Origin.';
+      return callback(new Error(msg), false);
+    }    return callback(null, true);
+  }
+}));
+
+/* EXECUTE ON STARTUP */
 (async() => {
   var members = await getTeamMembers();
   (async() => {
     var memberStatus = await getStatuses(members);
     console.log(memberStatus)
     fs.writeFileSync('cache.json', JSON.stringify(memberStatus));
-    app.listen(PORT);
-    console.log('Server started at http://localhost:' + PORT);
   })();
 })();
+app.listen(PORT);
+console.log('Server started at http://localhost:' + PORT);
