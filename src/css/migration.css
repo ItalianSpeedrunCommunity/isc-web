@@ -1,3 +1,29 @@
+@font-face {
+    font-family: lemon-milk;
+    src: url(fonts/lemon_milk/LEMONMILK-Regular.otf);
+}
+
+@font-face {
+    font-family: montserrat;
+    src: url(fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+body {
+    font-family: montserrat;
+}
+
+.title {
+    background-color: rgba(38,38,46,.5);
+    font-size: 70px;
+    line-height: 1em;
+    color: white;
+    padding: 0.35em;
+}
+
+.title .themecolor {
+    font-family: lemon-milk;
+}
+
 .logo-main {
     width: 230px;
     height: 60px;
@@ -86,6 +112,11 @@
 	height: 100vh;
 	background-position: top center;
 	background-size: cover;
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-start;
 }
 
 .community-member {
@@ -157,6 +188,16 @@
     #Wrapper #Header_wrapper #Header #Top_bar.is-sticky {
         background: rgb(0, 0, 0, .7)!important;
     }
+
+    .title {
+        position: relative;
+        top: -0.5em;
+        left: 0.5em;
+    }
+
+    #Top_bar .menu>li>a span:not(.description) {
+        border-style: none;
+    }
 }
 
 @media only screen and (max-width: 1023px) {
@@ -210,5 +251,12 @@
     #contentslider .section_wrapper {
         margin: 0px;
         width: 100%!important;
+    }
+    .main-hero {
+        align-items: center;
+    }
+    .title {
+        text-align: center;
+        margin-top: 50vh;
     }
 }
