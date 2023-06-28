@@ -87,7 +87,7 @@ body {
 }
 
 .social-container {
-    margin: 0 auto
+    margin: 0 auto;
 }
 
 .centered_text {
@@ -125,7 +125,8 @@ body {
 .footer-social {
 	display: flex;
     align-items: flex-start;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    padding-bottom: 20px;
 }
 
 .footer-social img {
@@ -190,6 +191,10 @@ body {
 #social-container {
     display: flex;
     justify-content: center;
+}
+
+.business-email {
+    margin-bottom: 20px;
 }
 
 @media only screen and (min-width: 1024px) {
