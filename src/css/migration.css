@@ -133,10 +133,6 @@ body {
 	width: 60px;
 }
 
-.guf-logo {
-	height: 300px;
-}
-
 #Footer {
 	padding-top: 50px;
 }
@@ -196,6 +192,25 @@ body {
 .business-email {
     margin-bottom: 20px;
 }
+.guf-event {
+    padding: 35px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.guf-event h2 {
+    color: white;
+    font-family: lemon-milk;
+    font-size: 2.3em;
+}
+.guf-event-spring {
+    background-color: #262F61;
+}
+.guf-event-autumn {
+    background-color: #BD415D;
+}
 
 @media only screen and (min-width: 1024px) {
     #Wrapper #Header_wrapper #Header #Top_bar.is-sticky {
@@ -211,14 +226,17 @@ body {
     #Top_bar .menu>li>a span:not(.description) {
         border-style: none;
     }
+
+    .guf-logo {
+        max-width: 400px;
+        max-height: 320px;
+        margin-bottom: 40px;
+    }
 }
 
 @media only screen and (max-width: 1023px) {
 	.footer-social img {
 		width: 50px;
-	}
-	.guf-logo {
-		height: 260px;
 	}
 	#Footer {
 		padding-top: 20px;
@@ -298,5 +316,17 @@ body {
     
     .wide-banner-community-image {
         background-image: url(../isc/images/la_community_mobile.jpg)
+    }
+    .guf-event h2 {
+        font-size: 22px;
+    }
+    .guf-event-spring {
+        margin-bottom: 25px;
+        padding: 20px;
+    }
+    .guf-logo {
+        max-height: 200px;
+        max-width: 240px;
+        margin-bottom: 20px;
     }
 }
