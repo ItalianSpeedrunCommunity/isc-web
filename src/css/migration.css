@@ -254,9 +254,12 @@ body {
     }
     .main-hero {
         align-items: center;
+        justify-content: center;
     }
     .title {
         text-align: center;
         margin-top: 50vh;
+        font-size: 50px;
+        width: 110%;
     }
 }
