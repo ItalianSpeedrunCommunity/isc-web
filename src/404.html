@@ -21,17 +21,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <!-- Favicons -->
-    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="shortcut icon" href="//images/favicon.ico">
 
     <!-- FONTS -->
     <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:100,300,400,400italic,700'>
     <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Patua+One:100,300,400,400italic,700'>
 
     <!-- CSS -->
-    <link rel='stylesheet' href='css/global.css'>
-    <link rel='stylesheet' href='css/structure.css'>
-    <link rel='stylesheet' id='style-static' href='css/be_style.css'>
-    <link rel='stylesheet' href='css/custom.css'>
+    <link rel='stylesheet' href='//css/global.css'>
+    <link rel='stylesheet' href='//css/structure.css'>
+    <link rel='stylesheet' id='style-static' href='//css/be_style.css'>
+    <link rel='stylesheet' href='//css/custom.css'>
 
 </head>
 
@@ -52,58 +52,6 @@
             </div>
         </div>
     </div>
-
-    <!-- Popup contact form -->
-    <div id="popup_contact">
-        <a class="button button_js" href="#"><i class="icon-mail-line"></i></a>
-        <div class="popup_contact_wrapper">
-
-            <div id="contactWrapper_popup">
-                <form id="contactform_popup">
-                    <h4>Send us a message</h4>
-                    <p>
-                        <span>
-								<input type="text" name="name_popup" id="name_popup" size="40" aria-required="true" aria-invalid="false" placeholder="Your name" />
-							</span><span>
-								<input type="email" name="email_popup" id="email_popup" size="40" aria-required="true" aria-invalid="false" placeholder="Your email" />
-							</span><span>
-								<input type="text" name="subject_popup" id="subject_popup" size="40" aria-required="true" aria-invalid="false" placeholder="Subject" />
-							</span><span> 								<textarea name="body_popup" cols="40" id="body_popup" rows="2" aria-required="true" aria-invalid="false" placeholder="Message"></textarea></span>
-
-                        <input type="button" value="Send Message" id="submit_popup" onClick="return check_values_popup();">
-                    </p>
-                </form>
-                <div id="confirmation_popup"></div>
-            </div>
-
-            <span class="arrow"></span>
-        </div>
-    </div>
-
-    <!-- JS -->
-
-    <script src="js/jquery-3.6.0.min.js"></script>
-	<script src="js/jquery-migrate-3.4.0.min.js"></script>
-
-    <script src="js/mfn.menu.js"></script>
-    <script src="js/jquery.plugins.js"></script>
-    <script src="js/jquery.jplayer.min.js"></script>
-    <script src="js/animations/animations.js"></script>
-    <script src="js/email.js"></script>
-    <script src="js/scripts.js"></script>
-
-    <script>
-        jQuery(window).on('load', function () {
-            var retina = window.devicePixelRatio> 1 ? true : false;
-            if (retina) {
-                var retinaEl = jQuery("#logo img");
-                var retinaLogoW = retinaEl.width();
-                var retinaLogoH = retinaEl.height();
-                retinaEl.attr("src","images/logo-retina.png").width(retinaLogoW).height(retinaLogoH)
-            }
-        });
-    </script>
-
 </body>
 
 </html>
