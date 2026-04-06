@@ -410,7 +410,7 @@ body {
     cursor: pointer;
     display: inline-block;
     text-decoration: none;
-    transition: all 0.3 ease;
+    transition: all 0.3s ease;
     margin-bottom: 25px;
 }
 
@@ -692,6 +692,7 @@ body {
 }
 
 .sponsor-carousel {
+    --sets: 3;
     display: flex;
     gap: 40px;
     padding: 20px;
@@ -699,18 +700,13 @@ body {
     width: max-content;
 }
 
-.sponsor-carousel:hover {
+.sponsor-carousel-wrapper:hover .sponsor-carousel {
     animation-play-state: paused;
 }
 
 @keyframes scroll-carousel {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(-50%);
-    }
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(calc(-100% / var(--sets))); }
 }
 
 .sponsor-carousel::-webkit-scrollbar {
