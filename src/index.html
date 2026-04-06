@@ -38,6 +38,8 @@
   <link rel="stylesheet" href="css/structure.css" />
   <link rel="stylesheet" href="css/agency6.css" />
   <link rel="stylesheet" href="css/migration.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 </head>
 
 <body
@@ -100,7 +102,7 @@
         <div class="row">
           <div class="col-md-12 valign-top clearfix main-hero wide-banner-home-image" data-col="one-second">
             <span class="title">
-              <span class="themecolor">Italian Speedrun Community</span>
+              <span class="themecolor">Italian Speedrun Community</span><br />
               l'associazione italiana di speedrunning
             </span>
           </div>
@@ -168,80 +170,179 @@
       </div>
     </div>
 
-    <div class="section mcb-section equal-height-wrap container padding_top_40" id="e-commerce">
+    <!-- SEZIONE INFO EVENTO GUF 2026 -->
+    <div class="section mcb-section container event-info-section" id="event-info">
       <div class="row">
-        <div class="col-md valign-middle clearfix text_section_padding" data-col="one-second">
-          <div class="row">
-            <div class="col-12">
-              <div class="column_attr clearfix mobile_align_center">
-                <h2 class="themecolor">I NOSTRI EVENTI</h2>
-              </div>
+        <div class="col-12">
+          <h2 class="event-info-title">GIOCHI D'UN FIATO 2026</h2>
+          <div class="event-info-box">
+            <div class="event-info-details">
+              <span class="event-info-item">📅 9-10 Maggio 2026</span>
+              <span class="event-info-item">📍 Avanzi Coworking, Milano</span>
             </div>
-            <div class="col-12">
-              <div class="column_attr clearfix mobile_align_center">
-                <div class="youtube-container">
-                  <iframe class="youtube-video" src="https://www.youtube.com/embed/26bi8sNk4Ks?si=ah8OVOct1XHusshy"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p class="event-info-description">
+              La maratona di speedrun italiana torna in presenza! Speedrun dal vivo,
+              clinica mobile e tante sorprese ti aspettano a Milano.
+            </p>
+            <a href="https://fungos.italianspeedruncommunity.com/events/6" class="event-info-button" target="_blank">SCOPRI DI PIÙ</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="no_line margin-40" />
+
+    <!-- SEZIONE SHOP GUF 2026 -->
+    <div class="section mcb-section container shop-section" id="shop-guf2026">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="shop-title">SHOP GUF 2026</h2>
+          <div class="shop-box">
+            <div class="shop-content">
+              <div class="shop-image-col">
+                <img src="isc/images/merch.png" alt="Merchandising GUF 2026" class="shop-merch-image" />
+              </div>
+              <div class="shop-text-col">
+                <p class="shop-description">
+                  Acquista i gadget ufficiali di Giochi d'Un Fiato 2026 e sostieni Medici del Mondo!
+                  Magliette, felpe e gadget esclusivi per ricordare questo evento unico a Milano.
+                </p>
+                <div class="shop-highlight-box">
+                  <span>Tutto il ricavato va interamente a Medici del Mondo!</span>
                 </div>
-                <p align="justify">
-                  Organizziamo eventi di speedrun entusiasmanti e divertenti,
-                  in cui mettiamo in mostra il talento dei speedrunner di
-                  tutta Italia. Le nostre maratone di speedrunning sono
-                  momenti unici in cui i partecipanti danno sfoggio delle loro
-                  abilità, offrendo al pubblico uno spettacolo coinvolgente e
-                  mozzafiato.
-                </p>
-                <p align="justify">
-                  Dai grandi classici ai titoli più recenti, i nostri eventi
-                  coprono un'ampia varietà di giochi per soddisfare ogni tipo
-                  di appassionato di videogiochi.
-                </p>
-                <p align="justify">
-                  Organizziamo due eventi principali all'anno:
-                  <b>Giochi d'un Fiato Autunno</b>, un evento completamente
-                  online che coinvolge partecipanti da tutta Italia, e
-                  <b>Giochi d'un Fiato Primavera</b>, un'esperienza unica che
-                  combina la diretta online con un evento in presenza.
-                </p>
-                <p align="justify">
-                  Ma non finisce qui! Durante l'anno organizziamo anche una
-                  serie di eventi tematici, con sfide, tornei e record da
-                  battere.
-                </p>
-                <hr class="no_line margin-40" />
+                <a href="https://donaora.medicidelmondo.it/guf2026/" class="shop-button" target="_blank">ACQUISTA ORA</a>
+                <div class="shop-exclusive-box">
+                  <p>
+                    Con un acquisto di almeno 30€ su un unico ordine riceverai la <br />
+                    <span class="highlight">CARTA LEGGENDARIA GUF 2026</span>!<br />
+                    Solo 50 copie disponibili!
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-          <div class="col-md valign-middle clearfix text_section_padding" data-col="one-second">
-            <div class="row">
-              <div class="col-md-6 valign-top clearfix text_section_padding" data-col="one-second">
-                <div class="guf-event guf-event-spring">
-                  <div class="image_frame image_item no_link scale-with-grid no_border guf-logo">
-                    <div class="image_wrapper centered_text">
-                      <img class="scale-with-grid" src="isc/images/GUF_darkbg.png" alt="Giochi d'un Fiato Primavera" />
-                    </div>
-                  </div>
-                  <h2 class="centered_text">
-                    <a href="https://fungos.italianspeedruncommunity.com/events/6" style="color: #d671ff;">
-                      9-10 aprile 2026</a> <br /> Avanzi Coworking
-                  </h2>
-                </div>
+        </div>
+      </div>
+    </div>
+    <hr class="no_line margin-40" />
+
+    <!-- SEZIONE GUEST -->
+    <div class="section mcb-section container guest-section" id="guests">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="guest-title">I NOSTRI OSPITI</h2>
+          <div class="guest-cards-container">
+            <!-- Guest 1: YOTOBI -->
+            <div class="guest-card">
+              <img src="isc/images/guests/Yotobi_1.jpg" alt="Yotobi" class="guest-image" />
+              <h3 class="guest-name">YOTOBI</h3>
+              <p class="guest-description">YouTuber e Streamer Partner</p>
+              <div class="guest-social">
+                <a href="https://www.youtube.com/@yotobigames" class="guest-social-link youtube"
+                  target="_blank">YouTube</a>
+                <a href="https://www.twitch.tv/yotobi" class="guest-social-link twitch" target="_blank">Twitch</a>
               </div>
-              <div class="col-md-6 valign-top clearfix text_section_padding" data-col="one-second">
-                <div class="guf-event guf-event-autumn">
-                  <div class="image_frame image_item no_link scale-with-grid no_border guf-logo">
-                    <div class="image_wrapper centered_text">
-                      <img class="scale-with-grid" src="isc/images/GUFA_darkbg.png" alt="Giochi d'un Fiato Autunno" />
-                    </div>
-                  </div>
-                  <h2 class="centered_text">
-                    <a href="https://fungos.italianspeedruncommunity.com/events/5" style="color: #FD6B20;">
-                      24-26 ottobre 2025</a> <br /> online su Twitch.tv
-                  </h2>
-                </div>
+            </div>
+            <!-- Guest 2: IL GATTO SUL TUBO -->
+            <div class="guest-card">
+              <img src="isc/images/guests/Gatto_1.jpg" alt="Il Gatto sul Tubo" class="guest-image" />
+              <h3 class="guest-name">IL GATTO SUL TUBO</h3>
+              <p class="guest-description">Streamer Partner - Pokopia</p>
+              <div class="guest-social">
+                <a href="https://www.youtube.com/@ilgattosultubo" class="guest-social-link youtube"
+                  target="_blank">YouTube</a>
+                <a href="https://www.twitch.tv/ilgattosultubo" class="guest-social-link twitch"
+                  target="_blank">Twitch</a>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="no_line margin-40" />
+
+    <!-- SEZIONE LOCATION -->
+    <div class="section mcb-section container location-section" id="location">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="location-title">DOVE SAREMO</h2>
+          <div class="location-content">
+            <div class="location-info">
+              <h3>Avanzi Coworking</h3>
+              <p class="address">Via Ampere 61/A, Milano</p>
+              <p class="description">
+                L'evento si terrà negli spazi di Avanzi Coworking, un coworking nel cuore di Milano
+                che ospiterà la nostra clinica mobile e le postazioni di speedrun dal vivo.
+                Durante l'evento sarà possibile seguire le run in presenza, incontrare gli speedrunner
+                e i guest, e vivere un'esperienza unica nel mondo dello speedrun italiano.
+              </p>
+            </div>
+            <div class="location-map" id="map"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="no_line margin-40" />
+
+    <!-- SEZIONE SPONSOR -->
+    <div class="section mcb-section container sponsor-section" id="sponsors">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="sponsor-title">I NOSTRI SPONSOR</h2>
+          <div class="sponsor-carousel-wrapper">
+            <div class="sponsor-carousel">
+              <!-- Sponsor 1: NightDive Studios -->
+              <a href="https://www.nightdivestudios.com/" target="_blank" class="sponsor-item-link">
+                <div class="sponsor-item">
+                  <div class="sponsor-logo-placeholder">Logo</div>
+                  <p class="sponsor-name">NightDive Studios</p>
+                </div>
+              </a>
+              <!-- Sponsor 2: Placeholder -->
+              <a href="#" class="sponsor-item-link">
+                <div class="sponsor-item">
+                  <div class="sponsor-logo-placeholder">Logo</div>
+                  <p class="sponsor-name">Sponsor 1</p>
+                </div>
+              </a>
+              <!-- Sponsor 3: Placeholder -->
+              <a href="#" class="sponsor-item-link">
+                <div class="sponsor-item">
+                  <div class="sponsor-logo-placeholder">Logo</div>
+                  <p class="sponsor-name">Sponsor 2</p>
+                </div>
+              </a>
+              <!-- Sponsor 4: Placeholder -->
+              <a href="#" class="sponsor-item-link">
+                <div class="sponsor-item">
+                  <div class="sponsor-logo-placeholder">Logo</div>
+                  <p class="sponsor-name">Sponsor 3</p>
+                </div>
+              </a>
+              <!-- Duplicati per loop continuo -->
+              <a href="https://www.nightdivestudios.com/" target="_blank" class="sponsor-item-link">
+                <div class="sponsor-item">
+                  <div class="sponsor-logo-placeholder">Logo</div>
+                  <p class="sponsor-name">NightDive Studios</p>
+                </div>
+              </a>
+              <a href="#" class="sponsor-item-link">
+                <div class="sponsor-item">
+                  <div class="sponsor-logo-placeholder">Logo</div>
+                  <p class="sponsor-name">Sponsor 1</p>
+                </div>
+              </a>
+              <a href="#" class="sponsor-item-link">
+                <div class="sponsor-item">
+                  <div class="sponsor-logo-placeholder">Logo</div>
+                  <p class="sponsor-name">Sponsor 2</p>
+                </div>
+              </a>
+              <a href="#" class="sponsor-item-link">
+                <div class="sponsor-item">
+                  <div class="sponsor-logo-placeholder">Logo</div>
+                  <p class="sponsor-name">Sponsor 3</p>
+                </div>
+              </a>
             </div>
           </div>
         </div>
@@ -327,6 +428,23 @@
       document.getElementById('twitch-embed').style.display = 'block'
       document.getElementById('hero').style.display = 'none'
     })
+  </script>
+
+  <!-- Leaflet JS for OpenStreetMap -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script type="text/javascript">
+    // Initialize OpenStreetMap
+    var map = L.map('map').setView([45.4668, 9.2265], 16);
+    
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+      maxZoom: 19
+    }).addTo(map);
+    
+    L.marker([45.4668, 9.2265]).addTo(map)
+      .bindPopup('<b>Avanzi Coworking</b><br>Via Ampere 61/A, Milano')
+      .openPopup();
   </script>
 </body>
 
