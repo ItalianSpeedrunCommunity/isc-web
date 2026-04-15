@@ -1,6 +1,8 @@
 node_modules
-.DS_Store
+dist/
+.D_Store
 src/.DS_Store
 src/isc/.DS_Store
 src/isc/images/.DS_Store
 src/isc/images/team_slider/.DS_Store
+.DS_Store
