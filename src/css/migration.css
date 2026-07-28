@@ -10,6 +10,7 @@
 
 body {
     font-family: montserrat;
+    -webkit-font-smoothing: antialiased;
 }
 
 .title {
@@ -275,6 +276,7 @@ body {
     font-size: 2.5em;
     margin-bottom: 20px;
     text-align: center;
+    text-wrap: balance;
 }
 
 .event-info-details {
@@ -295,6 +297,7 @@ body {
     font-size: 1.1em;
     margin-bottom: 30px;
     line-height: 1.6;
+    text-wrap: pretty;
 }
 
 .event-info-button {
@@ -308,7 +311,9 @@ body {
     cursor: pointer;
     display: inline-block;
     text-decoration: none;
-    transition: all 0.3s ease;
+    transition-property: background-color, box-shadow, transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
 }
 
 .event-info-button:hover {
@@ -317,6 +322,10 @@ body {
     box-shadow: 0 5px 20px rgba(214, 113, 255, 0.4);
     color: white;
     text-decoration: none;
+}
+
+.event-info-button:active {
+    transform: scale(0.96);
 }
 
 /* Sezione Shop */
@@ -410,7 +419,9 @@ body {
     cursor: pointer;
     display: inline-block;
     text-decoration: none;
-    transition: all 0.3s ease;
+    transition-property: background-color, box-shadow, transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
     margin-bottom: 25px;
 }
 
@@ -548,7 +559,9 @@ body {
     border-radius: 20px;
     font-size: 0.9em;
     text-decoration: none;
-    transition: all 0.3s ease;
+    transition-property: color, opacity;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
 }
 
 .guest-social-link.youtube {
@@ -775,7 +788,9 @@ body {
 }
 
 .sponsor-item {
-    transition: all 0.3s ease;
+    transition-property: background-color, border-color, box-shadow, transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
 }
 
 /* Responsive */

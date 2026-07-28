@@ -180,24 +180,25 @@
     <div class="section mcb-section container event-info-section" id="event-info">
       <div class="row">
         <div class="col-12">
-          <h2 class="event-info-title">GIOCHI D'UN FIATO 2026</h2>
+          <h2 class="event-info-title">GIOCHI D'UN FIATO PRIMAVERA 2026</h2>
           <div class="event-info-box">
             <div class="event-info-details">
               <span class="event-info-item">📅 9-10 Maggio 2026</span>
               <span class="event-info-item">📍 Avanzi Coworking, Milano</span>
             </div>
             <p class="event-info-description">
-              La maratona di speedrun italiana torna in presenza! Speedrun dal vivo,
-              clinica mobile e tante sorprese ti aspettano a Milano.
+              La maratona di speedrun italiana si è svolta in presenza, con speedrun dal vivo,
+              clinica mobile e tante sorprese a Milano.
             </p>
             <a href="https://fungos.italianspeedruncommunity.com/events/6" class="event-info-button"
-              target="_blank">SCOPRI DI PIÙ</a>
+              target="_blank">RIVIVI L'EVENTO</a>
           </div>
         </div>
       </div>
     </div>
     <hr class="no_line margin-40" />
 
+  <div class="guf-2026-hidden" hidden aria-hidden="true">
     <!-- SEZIONE SHOP GUF 2026 -->
     <div class="section mcb-section container shop-section" id="shop-guf2026">
       <div class="row">
@@ -232,7 +233,9 @@
       </div>
     </div>
     <hr class="no_line margin-40" />
+  </div>
 
+  <div class="guf-2026-hidden" hidden aria-hidden="true">
     <!-- SEZIONE GUEST -->
     <div class="section mcb-section container guest-section" id="guests">
       <div class="row">
@@ -278,10 +281,10 @@
               <h3>Avanzi Coworking</h3>
               <p class="address">Via Andrea Maria Ampère 61/A, 20131 Milano</p>
               <p class="description">
-                L'evento si terrà negli spazi di Avanzi Coworking, un coworking nel cuore di Milano che ospiterà la
-                maratona e la clinica mobile di Medici del Mondo. Durante Giochi d'Un Fiato sarà possibile seguire le
-                run in presenza, incontrare gli speedrunner e gli ospiti, e vivere un'esperienza unica nel mondo dello
-                speedrun italiano.
+                L'evento si è svolto negli spazi di Avanzi Coworking, un coworking nel cuore di Milano che ha ospitato
+                la maratona e la clinica mobile di Medici del Mondo. Durante Giochi d'Un Fiato è stato possibile
+                seguire le run in presenza, incontrare gli speedrunner e gli ospiti, e vivere un'esperienza unica nel
+                mondo dello speedrun italiano.
               </p>
             </div>
             <div class="location-map" id="map"></div>
@@ -290,7 +293,9 @@
       </div>
     </div>
     <hr class="no_line margin-40" />
+  </div>
 
+  <div class="guf-2026-hidden" hidden aria-hidden="true">
     <!-- SEZIONE SPONSOR -->
     <div class="section mcb-section container sponsor-section" id="sponsors">
       <div class="row">
@@ -427,6 +432,7 @@
     </div>
     <hr class="no_line margin-40" />
   </div>
+  </div>
   <footer id="Footer" class="clearfix">
     <div class="container">
       <div class="row">
@@ -512,16 +518,19 @@
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script type="text/javascript">
     // Initialize OpenStreetMap
-    var map = L.map('map').setView([45.4668, 9.2265], 16);
+    var mapContainer = document.getElementById('map');
+    if (mapContainer && !mapContainer.closest('[hidden]')) {
+      var map = L.map(mapContainer).setView([45.4668, 9.2265], 16);
 
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-      maxZoom: 19
-    }).addTo(map);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        maxZoom: 19
+      }).addTo(map);
 
-    L.marker([45.4839, 9.2260]).addTo(map)
-      .bindPopup('<b>Avanzi Coworking</b><br>Via Andrea Maria Ampère 61/A, 20131 Milano')
-      .openPopup();
+      L.marker([45.4839, 9.2260]).addTo(map)
+        .bindPopup('<b>Avanzi Coworking</b><br>Via Andrea Maria Ampère 61/A, 20131 Milano')
+        .openPopup();
+    }
   </script>
 </body>
 
